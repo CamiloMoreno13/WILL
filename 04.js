@@ -13,7 +13,14 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+  String.prototype.reverse = function(){
+    let reverse = ''
+    for(let i = this.length -1 ; i >= 0 ; i--){
+      reverse += this[i]
+    }
+    return reverse
+  }
+  return num.toString() === num.toString().reverse()
 }
 
 // No modifiques nada debajo de esta linea //
